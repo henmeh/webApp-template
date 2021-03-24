@@ -1,16 +1,15 @@
 # web_app_template
 
-A new Flutter project.
+This is a simple template for a web application with Flutter. It contains 
 
-## Getting Started
+- URL page Navigation
 
-This project is a starting point for a Flutter application.
+- Gradient Backroundcolor
 
-A few resources to get you started if this is your first Flutter project:
+- GridView.builder()
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+- Connection to Moralis and IPFS via java script implementation
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- first moralis functionallity with logIn and logOut Button
+
+
