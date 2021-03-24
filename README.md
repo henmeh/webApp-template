@@ -12,4 +12,6 @@ This is a simple template for a web application with Flutter. It contains
 
 - first moralis functionallity with logIn and logOut Button
 
-
+![plot](./images/image1.png)
+![plot](./images/image2.png)
+![plot](./images/image3.png)
