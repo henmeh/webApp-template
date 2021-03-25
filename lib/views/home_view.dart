@@ -45,7 +45,7 @@ class _HomeViewState extends State<HomeView> {
           hoverThickness: 10.0,
           radius: Radius.circular(10),
           thickness: 10.0,
-          color: Colors.white,
+          color: Theme.of(context).highlightColor,
         ),
         child: GridView.builder(
           controller: _scrollController,
@@ -61,8 +61,12 @@ class _HomeViewState extends State<HomeView> {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Icon(Icons.photo),
-                  button(Colors.blueAccent, Colors.white, 'Button ${idx}',
-                      _changeSide, [ButtonListRoute, idx, 42])
+                  button(
+                      Theme.of(context).buttonColor,
+                      Theme.of(context).highlightColor,
+                      'Button ${idx}',
+                      _changeSide,
+                      [ButtonListRoute, idx, 42])
                 ],
               ),
             );

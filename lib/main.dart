@@ -14,13 +14,14 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'NFT Auction',
+      title: 'web_app_template',
       theme: ThemeData(
           errorColor: Colors.red,
+          buttonColor: Colors.blueAccent,
           highlightColor: Colors.white,
-          primaryColor: Colors.black,
-          backgroundColor: Colors.grey,
-          accentColor: Colors.orange,
+          primaryColor: Colors.grey[850],
+          backgroundColor: Colors.white,
+          accentColor: Colors.purpleAccent,
           textTheme: ThemeData.light().textTheme.copyWith(
               headline6: TextStyle(fontWeight: FontWeight.bold, fontSize: 24),
               headline5: TextStyle(

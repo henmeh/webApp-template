@@ -11,10 +11,6 @@ class Navbar extends StatefulWidget {
 
 class _NavbarState extends State<Navbar> {
   String addresse;
-  final buttoncolors = {
-    0: Colors.blueAccent,
-    1: Colors.blueAccent,
-  };
 
   _logIn() async {
     var promise = login();
@@ -52,14 +48,18 @@ class _NavbarState extends State<Navbar> {
 
   @override
   Widget build(BuildContext context) {
+    final buttoncolors = {
+      0: Theme.of(context).buttonColor,
+      1: Theme.of(context).buttonColor,
+    };
     return Container(
       height: 75,
       padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
       decoration: BoxDecoration(
-        color: Colors.grey[850],
+        color: Theme.of(context).primaryColor,
         boxShadow: [
           BoxShadow(
-            color: Colors.grey[850].withOpacity(0.5),
+            color: Theme.of(context).primaryColor.withOpacity(0.5),
             spreadRadius: 5,
             blurRadius: 7,
             offset: Offset(0, 3), // changes position of shadow
@@ -71,7 +71,8 @@ class _NavbarState extends State<Navbar> {
         children: [
           Text(
             "WebSite Title",
-            style: TextStyle(color: Colors.white, fontSize: 30),
+            style: TextStyle(
+                color: Theme.of(context).highlightColor, fontSize: 30),
           ),
           Row(
             children: [
@@ -79,12 +80,16 @@ class _NavbarState extends State<Navbar> {
                   ? Container(
                       child: Text(
                         addresse,
-                        style: TextStyle(color: Colors.white, fontSize: 15),
+                        style: TextStyle(
+                            color: Theme.of(context).highlightColor,
+                            fontSize: 15),
                       ),
                     )
-                  : button(buttoncolors[0], Colors.white, "LogIn", _logIn),
+                  : button(buttoncolors[0], Theme.of(context).highlightColor,
+                      "LogIn", _logIn),
               SizedBox(width: 20),
-              button(buttoncolors[1], Colors.white, "LogOut", _logOut)
+              button(buttoncolors[1], Theme.of(context).highlightColor,
+                  "LogOut", _logOut)
             ],
           )
         ],
